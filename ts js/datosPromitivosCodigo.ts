@@ -1,22 +1,34 @@
-console.log('Datos primitivos en codigo')
+// Datos primitivos en código
 
-function sumando(a: number, b: number): number {
-    return a + b;
+// Ejemplo con booleano.
+let estudiasteJavaScript: boolean = false;
+
+if (estudiasteJavaScript) {
+    console.log('Podés seguir con TypeScript');
+} else {
+    console.log('Tenés que ver JavaScript antes de TypeScript');
 }
-let resultado = sumando(5, 3);
-console.log(resultado)
 
-class Usuarios {
-    nombre: string
-    constructor(nombre: string){
-        this.nombre = nombre;
+// Ejemplo con number.
+let boca: number = 11;
+let riBer: number = 12;
+
+function jugar(equipo1: number, equipo2: number, ): void {
+    if (equipo1 < equipo2) {
+        console.log('Gana boquita papa!!');
+    } else if (equipo1 === equipo2) {
+        console.log('Empate');
+    } else {
+        console.log('Gana riBer, martinez renuncia!!');
     }
-    saludo() {
-        console.log(`Hola, mi nombre es ${this.nombre}`);
-    }
-};
+}
 
-const Usuario1 = new Usuarios('Miguel');
-const Usuario2 = new Usuarios('Luciana');
+jugar(boca, riBer); 
 
-console.log(Usuario1, Usuario2)
+// ¿Qué es void?
+/*
+    En TypeScript, cuando tenemos una función que no va a devolver nada,
+    se usa void (vacío).
+    Se puede no poner nada, pero es buena práctica 
+    especificar void.
+*/
